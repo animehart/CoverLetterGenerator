@@ -27,14 +27,14 @@ def resumeGeneratorPDF(position, company, file): #in progress
     g.close()
     return 0;
 
-def resumeGeneratorDOC(position, company, file):
+def resumeGeneratorDOC(position, company, file, salutation):
     document = Document()
     
     g=open(file+".txt","r")
     
     contents = g.read()
     
-    p = document.add_paragraph("Dear Sir/Madam:")
+    p = document.add_paragraph(salutation)
     p = document.add_paragraph("I am excited to apply for your" + " " + position + " position with " + company +". " +contents)
     
     g.close()
