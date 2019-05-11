@@ -41,6 +41,6 @@ e3.grid(row=3, column=1) # Base Format
 e4.grid(row=2, column=1) # Salutations
 
 Button(master, text='Generate DOC', command= lambda: [check(e3.get()),resumeGeneratorDOC(e1.get(),e2.get(),e3.get(),variable.get()),e1_del(),e2_del(),e3_del()], bg="cyan").grid(row=4, column=0, sticky=W, pady=4)
-#Button(master, text='Generate TXT', command= lambda: [check(e3.get()),resumeGeneratorTXT(e1.get(),e2.get(),e3.get(),variable.get()),e1_del(),e2_del(),e3_del()]).grid(row=4, column=1, sticky=W, pady=4)
+Button(master, text='Generate PDF', command= lambda: [check(e3.get()),resumeGeneratorPDF(e1.get(),e2.get(),e3.get(),variable.get()),e1_del(),e2_del(),e3_del()], bg="red").grid(row=4, column=1, sticky=W, pady=4)
 
 master.mainloop()
